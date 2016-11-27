@@ -145,6 +145,8 @@ def process_intents(user, intent, entities):
 
         result = sqlite_data.query(user, date) if date else sqlite_data.all(user)
         return result if result else ["No Appointments"]
+    else:
+        return ["I did not understand you!"]
 
 
 def luis_request(query):
