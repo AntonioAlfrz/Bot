@@ -12,6 +12,8 @@ from os import remove
 api_token_url = "https://api.cognitive.microsoft.com/sts/v1.0/issueToken"
 api_url = "https://speech.platform.bing.com/recognize"
 luis_url = "https://api.projectoxford.ai/luis/v2.0/apps"
+luis_lang = "appid_en" #appid_es
+speech_lang = "en-US" #es-ES
 
 # Intents
 availability = "builtin.intent.calendar.check_availability"
@@ -34,7 +36,7 @@ Config = ConfigParser.ConfigParser()
 Config.read("credentials.ini")
 # LUIS
 luis_key = Config.get("LUIS", "key")
-luis_appid = Config.get("LUIS", "appid")
+luis_appid = Config.get("LUIS", luis_lang)
 luis_url += "/"+luis_appid
 # Speech API
 api_key = Config.get("Azure", "speech_key")
@@ -175,7 +177,7 @@ def speech_request(file_name):
     params = {
         "scenarios": "smd",
         "appid": "D4D52672-91D7-4C74-8AD8-42B1D98141A5",
-        "locale": "es-ES",
+        "locale": speech_lang,
         "device.os": "bot",
         "version": "3.0",
         "format": "json",
