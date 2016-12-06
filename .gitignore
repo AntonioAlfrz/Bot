@@ -1,3 +1,4 @@
 .idea
 credentials.ini
 test.wav
+*.pyc
