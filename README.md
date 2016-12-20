@@ -2,8 +2,9 @@
 Proof of concept of a telegram bot which manages appointments
 
 ## Resources
-https://github.com/python-telegram-bot/python-telegram-bot  
-http://docs.python-requests.org/en/master/#
+Telegram Bot Python wrapper: https://github.com/python-telegram-bot/python-telegram-bot  
+Wrapper documentation: http://docs.python-requests.org/en/master/#  
+Microsoft Cognitive Services (Speech to Text and Language Understanding): https://www.microsoft.com/cognitive-services/en-us/apis
 
 ## Deploy
 ~~~~
